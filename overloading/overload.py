@@ -7,6 +7,7 @@ class array(object):
 import random as rand
 
 overlyComplicatedPassword = ""
+
 for i in range(9):
     overlyComplicatedPassword += str(
         array(
@@ -15,4 +16,5 @@ for i in range(9):
             array(7, 8, 9).array
         ).array[rand.randint(0, 2)][rand.randint(0, 2)]
     )
+
 print(overlyComplicatedPassword)
