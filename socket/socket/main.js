@@ -31,6 +31,7 @@ io.on('connection', socket => {
 
     // emit
     socket.emit('server', "Connected to Server")
+    socket.emit('click', (msg) => {console.log(msg)})
 })
 
 http.listen(port, () => {

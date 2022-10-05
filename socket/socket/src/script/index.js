@@ -27,6 +27,10 @@ login.addEventListener('click', () => {
     console.log(users['user'])
 })
 
+document.body.addEventListener('click', () => {
+    socket.emit('click', "test message")
+})
+
 // socket.on('server', msg => {
 //     console.log(msg)
 // })
@@ -36,4 +40,4 @@ const listener = (eventName, ...args) => {
     console.log(users)
 }
 
-socket.onAny(listener)
+// socket.onAny(listener)
