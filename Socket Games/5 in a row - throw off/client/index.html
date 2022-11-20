@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>5 in a row</title>
+</head>
+<body>
+    <canvas height="400" width="400"></canvas>
+
+    <div class="controls-wrapper">
+        <ul id="events"></ul>
+        <div class="controls">
+            <div class="chat-wrapper">
+                <form action="" id="chat-form">
+                    <input type="text" autocomplete="off" title="chat" id="chat">
+                    <button id="send">Send</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="src/client.js"></script>
+</body>
+</html>

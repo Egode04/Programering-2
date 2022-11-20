@@ -5,20 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Socket.io</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Login -->
-    <input type="text" id="username" placeholder="username"> <br>
-    <input type="password" id="password" placeholder="password">
-    <button type="submit" id="login">Login</button> <br>
+    <!-- Game Area -->
+    <canvas></canvas>
 
-    <!-- Message -->
-    <input type="text" id="message" placeholder="message">
-    <button type="submit" id="send" >Send Message</button>
+    <!-- Game Code -->
+    <script src="script/variables.js"></script>
+    <script src="script/event.js"></script>
+    <script src="script/classes.js"></script>
+    <script src="script/utils.js"></script>
 
+    <!-- Socket -->
     <script src="socket.io/socket.io.js"></script>
-    <script src="script/index.js"></script>
+    <script src="script/client.js"></script>
     
 </body>
 </html>
