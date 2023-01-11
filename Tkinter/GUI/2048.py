@@ -24,7 +24,7 @@ class Game(tk.Frame):
 
 
     def make_GUI(self):
-        # make grid
+        # create grid
         self.cells = []
         for i in range(4):
             row = []
@@ -41,7 +41,7 @@ class Game(tk.Frame):
                 row.append(cell_data)
             self.cells.append(row)
 
-        # make score header
+        # create score header
         score_frame = tk.Frame(self)
         score_frame.place(relx=0.5, y=40, anchor="center")
         tk.Label(

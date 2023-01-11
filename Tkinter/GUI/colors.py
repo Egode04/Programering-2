@@ -1,3 +1,4 @@
+# color var
 GRID_COLOR = "#a39489"
 EMPTY_CELL_COLOR = "#c2b3a9"
 SCORE_LABEL_FONT = ("Verdana", 20)
@@ -7,6 +8,7 @@ GAME_OVER_FONT_COLOR = "#ffffff"
 WINNER_BG = "#ffcc00"
 LOSER_BG = "#a39489"
 
+# color obj
 CELL_COLORS = {
     2: "#fcefe6",
     4: "#f2e8cb",
