@@ -1,83 +1,52 @@
+:root {
+    --color-1: 23, 30, 38;
+    --color-2: 24, 32, 40;
+
+    --background-1: 38, 51, 62;
+    --background-2: 50, 68, 82;
+
+    --gradient-1: 180deg, rgba(24,32,40,1) 0%, rgba(24,32,40,1) 50%, rgba(38,51,62,1) 100%;
+
+    --box-shadow-1: 0 0 5px #171e26;
+
+    --width-0: 10px;
+
+    --height-0: 100vh;
+
+    --transition: all 500ms ease-in-out;
+}
+
 body {
-    font-family: "Helvetica Neue", sans-serif;
     margin: 0;
-    padding: 0;
-    scroll-behavior: smooth;
-    background: #222;
-}
-
-input {
-    outline: none;
-    font-size: 1.0rem;
-    padding: 0 5px;
-}
-
-button {
-    text-transform: uppercase;
-    font-size: 0.8rem;
-    padding: 3px 15px;
-    color: white;
-    line-height: 25px;
-    background-color: #00bcd4;
-    border: none;
-    border-radius: 2px;
-    cursor: pointer;
-    box-shadow: rgba(0, 0, 0, 0.12) 0 1px 6px, rgba(0, 0, 0, 0.12) 0 1px 4px;
-    transition: all 150ms ease-in;
-    outline: none;
-}
-
-button:hover {
-    background-color: #79d7e4;
-}
-
-button.turn:hover {
-    background-color: #eaeaea;
-}
-
-ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    border-bottom: 1px solid lightgrey;
-    overflow-y: scroll;
-}
-
-li {
-    padding: 10px 10px 10px 10px;
+    overflow-x: hidden;
+    overflow-y: over;
+    background: rgba(var(--color-2), 0.6);
+    background: linear-gradient(var(--gradient-1));
+    height: var(--height-0);
 }
 
 canvas {
-    display: block;
-    margin: 10px auto;
+    z-index: -1;
 }
 
-.controls-wrapper {
-    background-color: darkgrey;
-    width: 400px;
-    margin: 20px auto;
-    border: 1px solid lightgrey;
+/* width */
+::-webkit-scrollbar {
+    width: var(--width-0);
 }
 
-.chat-wrapper {
-    padding: 10px;
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgb(var(--color-1));
+    box-shadow: var(--box-shadow-1);
 }
 
-.chat-wrapper form {
-    display: flex;
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(var(--background-1));
+    transition: var(--transition-1);
 }
 
-.chat-wrapper form input {
-    font-size: 1.0rem;
-    margin: 0 10px 0 0;
-    padding: 0 5px;
-    flex-grow: 1;
-}
-
-.chat-wrapper form button {
-    width: 80px;
-}
-
-#events {
-    height: 150px;
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(var(--background-2)); 
 }

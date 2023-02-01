@@ -1,0 +1,109 @@
+:root {
+    --background: 169, 169, 169;
+
+    --border-1: 211, 211, 211;
+    --border-2: 1px solid rgb(var(--border-1));
+
+    --border-radius-1: 2px;
+
+    --black: 0, 0, 0;
+    --white: 255, 255, 255;
+
+    --lightgray-1: 234, 234, 234;
+    --lightblue-1: 121, 215, 228;
+
+    --box-shadow-1: rgba(var(--black), 0.12) 0 1px 6px, rgba(var(--black), 0.12) 0 1px 4px;
+
+    --padding-1: 10px 10px 10px 10px;
+    --padding-4: 3px 15px;
+
+    --transition-1: all 150ms ease-in;
+
+    --font-size-1: 0.8rem;
+    --font-size-2: 1.0rem;
+
+    --line-height: 25px;
+
+    /* wrapper */
+    --width-1: 400px;
+    --width-2: 80px;
+
+    --height-1: 150px;
+
+    --margin-1: 20px auto;
+    --margin-2: 0 10px 0 0;
+
+    --padding-2: 10px;
+    --padding-3: 0 5px;
+}
+
+input {
+    outline: none;
+    font-size: 1.0rem;
+    padding: 0 5px;
+}
+
+button {
+    text-transform: uppercase;
+    font-size: var(--font-size-1);
+    padding: var(--padding-4);
+    color: var(--white);
+    line-height: var(--line-height);
+    background-color: rgb(var(--lightblue-1));
+    border: none;
+    border-radius: var(--border-radius-1);
+    cursor: pointer;
+    box-shadow: var(--box-shadow-1);
+    transition: var(--transition-1);
+    outline: none;
+}
+
+button:hover {
+    background-color: rgb(var(--lightblue-1));
+}
+
+button.turn:hover {
+    background-color: rgb(var(--lightgray-1));
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-bottom: var(--border-2);
+    overflow-y: scroll;
+}
+
+li {
+    padding: var(--padding-1);
+}
+
+.controls-wrapper {
+    background-color: rgb(var(--background));
+    width: var(--width-1);
+    margin: var(--margin-1);
+    border: 1px solid rgb(var(--border-1));
+}
+
+.chat-wrapper {
+    padding: var(--padding-2);
+}
+
+.chat-wrapper form {
+    display: flex;
+}
+
+.chat-wrapper form input {
+    font-size: var(--font-size-2);
+    margin: var(--margin-2);
+    padding: var(--padding-3);
+    flex-grow: 1;
+}
+
+.chat-wrapper form button {
+    width: var(--width-2);
+}
+
+#events {
+    height: var(--height-1);
+}

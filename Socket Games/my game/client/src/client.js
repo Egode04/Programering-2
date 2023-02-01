@@ -18,11 +18,6 @@ function onChatSubmitted(event) {
 }
 
 function init() {
-    const canvas = document.querySelector('canvas')
-
-    canvas.width = 400
-    canvas.height = canvas.width
-
     socket.emit('connected')
     socket.on('message', log)
 

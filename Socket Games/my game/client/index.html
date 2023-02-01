@@ -5,23 +5,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/chat.css">
     <title>My Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Grape+Nuts&display=swap" rel="stylesheet">
+        <link rel="shortcut icon" href="/dist/favicon.ico">
 </head>
 <body>
-    <canvas height="400" width="400"></canvas>
-
-    <div class="controls-wrapper">
-        <ul id="events"></ul>
-        <div class="controls">
-            <div class="chat-wrapper">
-                <form action="" id="chat-form">
-                    <input type="text" autocomplete="off" title="chat" id="chat">
-                    <button id="send">Send</button>
-                </form>
+    <bg class="select-none p-0 m-0 absolute">
+        <div style="position: absolute; width: 100vw; height: 100vh;">
+            <div style="position: relative; font-family: 'Grape Nuts', cursive;">
+                <h1
+                    style="
+                        font-size: 5rem;
+                        color: #e3eaef;
+                        text-shadow: 0 0 1rem #e3eaef;
+                        text-align: center;
+                    "
+                >Star Shower</h1>
             </div>
         </div>
-    </div>
+        <canvas></canvas>
+    </bg>
 
+    <chat class="p-0 m-0 absolute h-full w-full grid place-items-center select-none">
+        <div class="controls-wrapper select-auto">
+            <ul id="events"></ul>
+            <div class="controls">
+                <div class="chat-wrapper">
+                    <form action="" id="chat-form">
+                        <input type="text" autocomplete="off" title="chat" id="chat">
+                        <button id="send">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </chat>
+
+    <!-- background -->
+    <script src="/src/utils.js"></script>
+    <script src="/src/canvas.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- socket -->
     <script src="/socket.io/socket.io.js"></script>
     <script src="src/client.js"></script>
 </body>
